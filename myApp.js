@@ -4,7 +4,7 @@ var bGround = require('fcc-express-bground');
 
 
 //Modify the myApp.js file to log "Hello World" to the console.
-bGround.log("Hello World");
+console.log("Hello World");
 
 
 
