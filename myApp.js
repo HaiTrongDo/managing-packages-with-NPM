@@ -6,9 +6,22 @@ var bGround = require('fcc-express-bground');
 //Modify the myApp.js file to log "Hello World" to the console.
 console.log("Hello World");
 
+//Start a Working Express Server
+// app.get("/",(req, res) => {
+//     res.send("Hello Express");
+// });
 
 
+// Serve an HTML File
+app.get("/", (req, res) => {
+    res.sendFile(__dirname +'/views/index.html')
+})
 
+// Serve Static Assets
+app.use("/public",express.static(__dirname + "/public"));
+
+
+// Serve JSON on a Specific Route
 
 
 
