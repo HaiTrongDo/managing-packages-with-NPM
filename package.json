@@ -2,6 +2,7 @@
 	"author": "Useful Progarmmer",
 	"description": "A web app that showcase that helps people to learn NPM and API with free code camp",
 	"name": "fcc-learn-npm-package-json",
+	"license": "MIT",
 	"keywords": ["Userful Progarmmer","freecodecamp", "Learn Back End Development and APIs"],
 	"dependencies": {
 		"express": "^4.14.0"
@@ -14,5 +15,4 @@
 		"type": "git",
 		"url": "https://idontknow/todo.git"
 	}
-
 }
