@@ -6,6 +6,7 @@
 	"version": "1.2.0",
 	"keywords": ["Userful Progarmmer","freecodecamp", "Learn Back End Development and APIs"],
 	"dependencies": {
+		"package-name": "2.14.0",
 		"express": "^4.14.0"
 	},
 	"main": "server.js",
