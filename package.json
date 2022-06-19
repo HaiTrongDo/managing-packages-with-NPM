@@ -3,6 +3,7 @@
 	"description": "A web app that showcase that helps people to learn NPM and API with free code camp",
 	"name": "fcc-learn-npm-package-json",
 	"license": "MIT",
+	"version": "1.2.0",
 	"keywords": ["Userful Progarmmer","freecodecamp", "Learn Back End Development and APIs"],
 	"dependencies": {
 		"express": "^4.14.0"
