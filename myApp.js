@@ -18,6 +18,14 @@ req.time = new Date().toString();
    res.json({time:req.time})
 })
 
+//Get Route Parameter Input from the Client
+app.get("/:word/echo",(req, res) => {
+    console.log(req.params)
+    res.json({echo:req.params.word })
+})
+
+
+
 //Modify the myApp.js file to log "Hello World" to the console.
 console.log("Hello World");
 
