@@ -12,10 +12,9 @@ app.use((req, res, next) => {
 
 
 //Use body-parser to Parse POST Requests
-app.use((req, res, next) => {
-    bodyParser.urlencoded({extended: false})
-    next();
-})
+app.use(bodyParser.urlencoded({extended: false}));
+//parse application
+app.use(bodyParser.json)
 
 
 //Chain Middleware to Create a Time Server
