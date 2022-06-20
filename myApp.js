@@ -36,6 +36,10 @@ app.get("/name",(req, res) => {
 })
 
 
+app.post("/name", (req, res) => {
+    res.json({name: req.body.first + " " + req.body.last})
+})
+
 //Modify the myApp.js file to log "Hello World" to the console.
 console.log("Hello World");
 
