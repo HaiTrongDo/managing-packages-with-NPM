@@ -10,6 +10,14 @@ app.use((req, res, next) => {
 })
 
 
+//Chain Middleware to Create a Time Server
+app.get("/now", (req, res, next) => {
+req.time = new Date().toString();
+    next();
+}, (req, res)=>{
+   res.json({time:req.time})
+})
+
 //Modify the myApp.js file to log "Hello World" to the console.
 console.log("Hello World");
 
