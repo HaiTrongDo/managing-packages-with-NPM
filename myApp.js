@@ -3,6 +3,12 @@ let app = express();
 var bGround = require('fcc-express-bground');
 require('dotenv').config();
 
+//Implement a Root-Level Request Logger Middleware
+app.use((req, res, next) => {
+    console.log(req.method + " "+ req.path + " - "+ req.ip)
+    next()
+})
+
 
 //Modify the myApp.js file to log "Hello World" to the console.
 console.log("Hello World");
@@ -36,6 +42,7 @@ app.get("/json",(req, res) => {
     }
     res.json(jsonResponse)
 });
+
 
 
 
