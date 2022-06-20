@@ -2,11 +2,19 @@ let express = require('express');
 let app = express();
 var bGround = require('fcc-express-bground');
 require('dotenv').config();
+const bodyParser = require('body-parser')
 
 //Implement a Root-Level Request Logger Middleware
 app.use((req, res, next) => {
     console.log(req.method + " "+ req.path + " - "+ req.ip)
     next()
+})
+
+
+//Use body-parser to Parse POST Requests
+app.use((req, res, next) => {
+    bodyParser.urlencoded({extended: false})
+    next();
 })
 
 
@@ -20,10 +28,13 @@ req.time = new Date().toString();
 
 //Get Route Parameter Input from the Client
 app.get("/:word/echo",(req, res) => {
-    console.log(req.params)
     res.json({echo:req.params.word })
 })
 
+//Get Query Parameter Input from the Client
+app.get("/name",(req, res) => {
+    res.json({name: req.query.first + " " + req.query.last})
+})
 
 
 //Modify the myApp.js file to log "Hello World" to the console.
@@ -58,8 +69,6 @@ app.get("/json",(req, res) => {
     }
     res.json(jsonResponse)
 });
-
-
 
 
 
