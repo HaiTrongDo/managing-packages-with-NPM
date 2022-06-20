@@ -13,8 +13,8 @@ app.use((req, res, next) => {
 
 //Use body-parser to Parse POST Requests
 app.use(bodyParser.urlencoded({extended: false}));
-//parse application
-app.use(bodyParser.json)
+// //parse application
+// app.use(bodyParser.json)
 
 
 //Chain Middleware to Create a Time Server
@@ -37,6 +37,7 @@ app.get("/name",(req, res) => {
 
 
 app.post("/name", (req, res) => {
+    // console.log(req.body.first, req.body.last);
     res.json({name: req.body.first + " " + req.body.last})
 })
 
