@@ -20,10 +20,13 @@ req.time = new Date().toString();
 
 //Get Route Parameter Input from the Client
 app.get("/:word/echo",(req, res) => {
-    console.log(req.params)
     res.json({echo:req.params.word })
 })
 
+//Get Query Parameter Input from the Client
+app.get("/name",(req, res) => {
+    res.json({name: req.query.first + " " + req.query.last})
+})
 
 
 //Modify the myApp.js file to log "Hello World" to the console.
