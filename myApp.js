@@ -30,7 +30,7 @@ app.use("/public",express.static(__dirname + "/public"));
 
 //Use the .env File
 app.get("/json",(req, res) => {
-    let jsonResponse = {"message":"Hello jonson"};
+    let jsonResponse = {"message":"Hello json"};
     if (process.env.MESSAGE_STYLE === "uppercase"){
         jsonResponse.message = jsonResponse.message.toUpperCase()
     }
